@@ -71,6 +71,9 @@ const gerarEstatisticas = () => {
         <p><strong>Maior gasto:</strong> R$ ${maiorGasto.toFixed(2)}</p>
         <p><strong>Menor gasto:</strong> R$ ${menorGasto.toFixed(2)}</p>
         <p><strong>Média:</strong> R$ ${mediaGastos.toFixed(2)}</p>
+        <h2> Percentual de gastos</h2>
+        <div id="grafico"></div>
+        </div>
     `
 }
 
