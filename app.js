@@ -66,11 +66,14 @@ const gerarEstatisticas = () => {
     const menorGasto = Math.min(...valores)
     const mediaGastos = totalDeGastos / valores.length
 
-    estatisticas.innerHTML = `
+    estatisticas.innerHTML = ` <div>
         <p><strong>Total de gastos:</strong> R$ ${totalDeGastos.toFixed(2)}</p>
         <p><strong>Maior gasto:</strong> R$ ${maiorGasto.toFixed(2)}</p>
         <p><strong>Menor gasto:</strong> R$ ${menorGasto.toFixed(2)}</p>
         <p><strong>Média:</strong> R$ ${mediaGastos.toFixed(2)}</p>
+        <h2> Percentual de gastos</h2>
+        <div id="grafico"></div>
+        </div>
     `
 }
 
