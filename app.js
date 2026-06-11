@@ -65,12 +65,19 @@ const gerarEstatisticas = () => {
     const maiorGasto = Math.max(...valores)
     const menorGasto = Math.min(...valores)
     const mediaGastos = totalDeGastos / valores.length
+    let TotalDeGastosMaiorQue100 = 0
+    despesaList.forEach(despesa => {
+        if (despesa.valor > 100) {
+            TotalDeGastosMaiorQue100++
+        }
+    })
 
     estatisticas.innerHTML = `
         <p><strong>Total de gastos:</strong> R$ ${totalDeGastos.toFixed(2)}</p>
         <p><strong>Maior gasto:</strong> R$ ${maiorGasto.toFixed(2)}</p>
         <p><strong>Menor gasto:</strong> R$ ${menorGasto.toFixed(2)}</p>
         <p><strong>Média:</strong> R$ ${mediaGastos.toFixed(2)}</p>
+        <p><strong>Total de gastos acima de R$ 100:</strong> R$ ${TotalDeGastosMaiorQue100.toFixed(2)}</p>
         <h2> Percentual de gastos</h2>
         <div id="grafico"></div>
         </div>
